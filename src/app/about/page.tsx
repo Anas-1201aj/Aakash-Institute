@@ -27,8 +27,8 @@ export default function AboutPage() {
       specialization: "Organic & Inorganic Chemistry",
     },
     {
-      name: "Mr. Amit ji Verma",
-      subject: "Maths",
+      name: "Mr. Anas Javed",
+      subject: "Mathematics",
       experience: "18 Years",
       qualification: "M.Tech. IIT Bombay",
       image: "/placeholder.svg?height=200&width=200",
