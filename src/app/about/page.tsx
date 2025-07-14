@@ -138,7 +138,7 @@ export default function AboutPage() {
               <CardContent>
                 <p className="text-gray-300">
                   To provide world-class education and comprehensive guidance that empowers students to excel in
-                  competitive examinations and achieve their career aspirations with confidence and competence.
+                  competitive examinations and achieve their career aspirations with confidence and competence..
                 </p>
               </CardContent>
             </Card>
