@@ -28,7 +28,7 @@ export default function AboutPage() {
     },
     {
       name: "Mr. Amit ji Verma",
-      subject: "Mathematics",
+      subject: "Maths",
       experience: "18 Years",
       qualification: "M.Tech. IIT Bombay",
       image: "/placeholder.svg?height=200&width=200",
