@@ -27,7 +27,7 @@ export default function AboutPage() {
       specialization: "Organic & Inorganic Chemistry",
     },
     {
-      name: "Mr. Amit Verma",
+      name: "Mr. Amit ji Verma",
       subject: "Mathematics",
       experience: "18 Years",
       qualification: "M.Tech. IIT Bombay",
@@ -138,7 +138,7 @@ export default function AboutPage() {
               <CardContent>
                 <p className="text-gray-300">
                   To provide world-class education and comprehensive guidance that empowers students to excel in
-                  competitive examinations and achieve their career aspirations with confidence and competence.
+                  competitive examinations and achieve their career aspirations with confidence and competence..
                 </p>
               </CardContent>
             </Card>
