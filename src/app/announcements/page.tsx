@@ -210,7 +210,7 @@ export default function AnnouncementsPage() {
                 onClick={() => setActiveFilter(category.id)}
                 className={`flex items-center space-x-2 ${
                   activeFilter === category.id
-                    ? "neon-glow bg-gradient-to-r from-blue-500 to-purple-600"
+                    ? " bg-gradient-to-r from-blue-500 to-purple-600"
                     : "neon-border bg-transparent hover-glow"
                 }`}
               >
@@ -385,7 +385,7 @@ export default function AnnouncementsPage() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
                 <Input type="email" placeholder="Enter your email" className="neon-border bg-gray-800/50 text-white" />
-                <Button className="neon-glow hover-glow bg-gradient-to-r from-blue-500 to-purple-600">Subscribe</Button>
+                <Button className=" hover-glow bg-gradient-to-r from-blue-500 to-purple-600">Subscribe</Button>
               </div>
               <p className="text-sm text-gray-400 mt-4">You can unsubscribe at any time. We respect your privacy.</p>
             </CardContent>

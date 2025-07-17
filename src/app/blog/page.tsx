@@ -17,7 +17,7 @@ export default function BlogPage() {
     author: "Dr. Rajesh Kumar",
     date: "March 15, 2024",
     readTime: "8 min read",
-    image: "/placeholder.svg?height=400&width=600",
+    image: "/jee-article.jpg?height=200&width=300",
     category: "Strategy",
     tags: ["IIT-JEE", "Study Tips", "Strategy"],
   }
@@ -29,7 +29,7 @@ export default function BlogPage() {
       author: "Prof. Sunita Sharma",
       date: "March 12, 2024",
       readTime: "6 min read",
-      image: "/placeholder.svg?height=200&width=300",
+      image: "/physics.jpg?height=200&width=300",
       category: "Physics",
       tags: ["Physics", "Problem Solving"],
     },
@@ -39,7 +39,7 @@ export default function BlogPage() {
       author: "Dr. Priya Patel",
       date: "March 10, 2024",
       readTime: "5 min read",
-      image: "/placeholder.svg?height=200&width=300",
+      image: "/biology.png?height=200&width=300",
       category: "Biology",
       tags: ["NEET", "Biology"],
     },
@@ -49,7 +49,7 @@ export default function BlogPage() {
       author: "Mr. Amit Verma",
       date: "March 8, 2024",
       readTime: "4 min read",
-      image: "/placeholder.svg?height=200&width=300",
+      image: "/timemanage.jpeg?height=200&width=300",
       category: "Tips",
       tags: ["Time Management", "Exam Tips"],
     },
@@ -59,7 +59,7 @@ export default function BlogPage() {
       author: "Dr. Rajesh Kumar",
       date: "March 5, 2024",
       readTime: "7 min read",
-      image: "/placeholder.svg?height=200&width=300",
+      image: "/chemistry.jpg?height=200&width=300",
       category: "Chemistry",
       tags: ["Chemistry", "Memory"],
     },
@@ -69,7 +69,7 @@ export default function BlogPage() {
       author: "Prof. Sunita Sharma",
       date: "March 3, 2024",
       readTime: "5 min read",
-      image: "/placeholder.svg?height=200&width=300",
+      image: "/tips.jpg?height=200&width=300",
       category: "Motivation",
       tags: ["Motivation", "Mental Health"],
     },
@@ -79,7 +79,7 @@ export default function BlogPage() {
       author: "Mr. Amit Verma",
       date: "March 1, 2024",
       readTime: "9 min read",
-      image: "/placeholder.svg?height=200&width=300",
+      image: "/calculus.png?height=200&width=300",
       category: "Mathematics",
       tags: ["Mathematics", "Calculus"],
     },
@@ -184,7 +184,7 @@ export default function BlogPage() {
                     </div>
                   </div>
                 </div>
-                <Button className="neon-glow hover-glow bg-gradient-to-r from-blue-500 to-purple-600">
+                <Button className=" hover-glow bg-gradient-to-r from-blue-500 to-purple-600">
                   Read Full Article
                 </Button>
               </div>
@@ -251,7 +251,7 @@ export default function BlogPage() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
                 <Input type="email" placeholder="Enter your email" className="neon-border bg-gray-800/50 text-white" />
-                <Button className="neon-glow hover-glow bg-gradient-to-r from-blue-500 to-purple-600">Subscribe</Button>
+                <Button className=" hover-glow bg-gradient-to-r from-blue-500 to-purple-600">Subscribe</Button>
               </div>
             </CardContent>
           </Card>
