@@ -455,7 +455,7 @@ export default function RegisterPage() {
                   <Button
                     type="submit"
                     size="lg"
-                    className="neon-glow hover-glow bg-gradient-to-r from-blue-500 to-purple-600 px-12 py-4 text-lg"
+                    className=" hover-glow bg-gradient-to-r from-blue-500 to-purple-600 px-12 py-4 text-lg"
                     disabled={!selectedCourse}
                   >
                     Complete Registration

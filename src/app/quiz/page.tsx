@@ -314,7 +314,7 @@ export default function QuizPage() {
             <Button
               onClick={handleNextQuestion}
               disabled={selectedAnswer === null}
-              className="neon-glow hover-glow bg-gradient-to-r from-blue-500 to-purple-600"
+              className=" hover-glow bg-gradient-to-r from-blue-500 to-purple-600"
             >
               {currentQuestion < questions.length - 1 ? "Next Question" : "Complete Quiz"}
             </Button>
@@ -390,7 +390,7 @@ export default function QuizPage() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button
                   onClick={() => startQuiz(currentQuiz!)}
-                  className="neon-glow hover-glow bg-gradient-to-r from-blue-500 to-purple-600"
+                  className=" hover-glow bg-gradient-to-r from-blue-500 to-purple-600"
                 >
                   Retake Quiz
                 </Button>
@@ -431,7 +431,7 @@ export default function QuizPage() {
               <Card key={quiz.id} className="glassmorphism hover-glow group">
                 <CardHeader className="text-center">
                   <div
-                    className={`w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r ${quiz.color} flex items-center justify-center neon-glow group-hover:scale-110 transition-transform`}
+                    className={`w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r ${quiz.color} flex items-center justify-center  group-hover:scale-110 transition-transform`}
                   >
                     <quiz.icon className="w-8 h-8 text-white" />
                   </div>
@@ -471,7 +471,7 @@ export default function QuizPage() {
                     </div>
                     <Button
                       onClick={() => startQuiz(quiz.id)}
-                      className="w-full neon-glow hover-glow bg-gradient-to-r from-blue-500 to-purple-600"
+                      className="w-full  hover-glow bg-gradient-to-r from-blue-500 to-purple-600"
                     >
                       Start Quiz
                     </Button>
@@ -519,7 +519,7 @@ export default function QuizPage() {
             ].map((item, index) => (
               <Card key={index} className="glassmorphism hover-glow text-center">
                 <CardContent className="p-6">
-                  <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 flex items-center justify-center neon-glow">
+                  <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 flex items-center justify-center ">
                     <item.icon className="w-8 h-8 text-white" />
                   </div>
                   <div className="text-3xl font-bold gradient-text mb-2">{item.step}</div>

@@ -66,7 +66,7 @@ export default function ContactPage() {
               <Card key={index} className="glassmorphism hover-glow text-center">
                 <CardHeader>
                   <div
-                    className={`w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r ${info.color} flex items-center justify-center neon-glow`}
+                    className={`w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r ${info.color} flex items-center justify-center `}
                   >
                     <info.icon className="w-8 h-8 text-white" />
                   </div>
@@ -161,7 +161,7 @@ export default function ContactPage() {
                     />
                   </div>
 
-                  <Button className="w-full neon-glow hover-glow bg-gradient-to-r from-blue-500 to-purple-600 text-white py-3">
+                  <Button className="w-full  hover-glow bg-gradient-to-r from-blue-500 to-purple-600 text-white py-3">
                     Send Message
                   </Button>
                 </form>

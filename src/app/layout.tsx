@@ -1,7 +1,7 @@
 import type React from "react"
 import type { Metadata } from "next"
 import { Poppins, Orbitron } from "next/font/google"
-import "./globals.css"
+import "./globals.css";
 import { LanguageProvider } from "../../components/language-provider"
 import { Navbar } from "../../components/navbar"
 import { Footer } from "../../components/footer"

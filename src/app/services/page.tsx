@@ -12,108 +12,107 @@ export default function ServicesPage() {
 
   const mainServices = [
     {
-      title: "IIT-JEE Preparation",
-      description: "Comprehensive coaching for IIT-JEE Main & Advanced with expert faculty and proven methodology.",
+      title: t("iitJee"),
+      description: t("iitJeeText"),
       icon: Trophy,
       color: "from-blue-500 to-cyan-500",
       duration: "2 Years",
       batchSize: "25-30 Students",
       features: [
-        "Complete syllabus coverage",
-        "Regular mock tests",
-        "Doubt clearing sessions",
-        "Performance analysis",
-        "Study materials included",
+        t("iitJeeText3"),
+        t("iitJeeText4"),
+        t("iitJeeText5"),
+        t("iitJeeText6"),
       ],
-      price: "₹1,50,000/year",
+      price: t("iitJeeText7"),
     },
     {
-      title: "NEET Preparation",
-      description: "Specialized coaching for NEET with focus on Biology, Chemistry, and Physics.",
+      title: t("neet"),
+      description: t("neetText1"),
       icon: Brain,
       color: "from-green-500 to-emerald-500",
-      duration: "2 Years",
-      batchSize: "20-25 Students",
+      duration: t("neetText2"),
+      batchSize: t("neetText3"),
       features: [
-        "NCERT-based teaching",
-        "Medical entrance focus",
-        "Regular assessments",
-        "Biology lab sessions",
-        "Previous year papers",
+        t("neetText4"),
+        t("neetText5"),
+        t("neetText6"),
+        t("neetText7"),
+        t("neetText8"),
       ],
-      price: "₹1,25,000/year",
+      price: t("neetText9"),
     },
     {
-      title: "AIEEE Preparation",
-      description: "Targeted preparation for AIEEE with emphasis on engineering fundamentals.",
+      title: t("aieee"),
+      description: t("aieeeText1"),
       icon: Zap,
       color: "from-purple-500 to-pink-500",
-      duration: "1 Year",
-      batchSize: "30-35 Students",
+      duration: t("aieeeText2"),
+      batchSize: t("aieeeText3"),
       features: [
-        "Engineering mathematics",
-        "Physics & Chemistry",
-        "Problem-solving techniques",
-        "Time management",
-        "Mock examinations",
+        t("aieeeText4"),
+        t("aieeeText5"),
+        t("aieeeText6"),
+        t("aieeeText7"),
+        t("aieeeText8"),
       ],
-      price: "₹80,000/year",
+      price: t("aieeeText9"),
     },
   ]
 
   const classServices = [
     {
-      class: "Class 9th",
+      class: t("class9th"),
       subjects: ["Mathematics", "Science", "English", "Social Studies"],
-      description: "Foundation building with conceptual clarity",
+      description: t("class9thText1"),
       color: "from-orange-500 to-red-500",
-      price: "₹25,000/year",
+      price: t("class9thText7"),
     },
     {
-      class: "Class 10th",
+      class: t("class10th"),
       subjects: ["Mathematics", "Science", "English", "Social Studies"],
-      description: "Board exam preparation with competitive edge",
+      description: t("class10thText1"),
       color: "from-pink-500 to-purple-500",
-      price: "₹30,000/year",
+      price: t("class10thText7"),
     },
     {
-      class: "Class 11th",
+      class: t("class11th"),
       subjects: ["Physics", "Chemistry", "Mathematics", "Biology"],
-      description: "Advanced concepts with JEE/NEET foundation",
+      description: t("class11thText1"),
       color: "from-blue-500 to-purple-500",
-      price: "₹45,000/year",
+      price: t("class11thText7"),
     },
     {
-      class: "Class 12th",
+      class: t("class12th"),
       subjects: ["Physics", "Chemistry", "Mathematics", "Biology"],
-      description: "Board + competitive exam preparation",
+      description: t("class12thText1"),
       color: "from-green-500 to-blue-500",
-      price: "₹50,000/year",
+      price: t("class12thText7"),
     },
   ]
 
   const additionalServices = [
     {
-      title: "Doubt Clearing Sessions",
-      description: "One-on-one sessions to clear individual doubts",
+      title: t("doubtClearingSeesions"),
+      description: t("doubtClearingSeesionsText1"),
       icon: Users,
       color: "from-yellow-500 to-orange-500",
     },
     {
-      title: "Test Series",
-      description: "Regular mock tests and practice papers",
+      title: t("testSeries"),
+      description: t("testSeriesText1"),
       icon: Target,
       color: "from-red-500 to-pink-500",
     },
     {
-      title: "Study Materials",
-      description: "Comprehensive books and digital resources",
+      title: t("studyMaterials"),
+      description: t("studyMaterialsText1"),
       icon: BookOpen,
       color: "from-indigo-500 to-purple-500",
     },
     {
-      title: "Career Counseling",
-      description: "Guidance for career choices and college selection",
+      title: t("carrerCounseling"),
+      description: t("carrerCounselingText1"),
       icon: Award,
       color: "from-teal-500 to-green-500",
     },
@@ -125,10 +124,9 @@ export default function ServicesPage() {
       <section className="py-20 bg-gradient-to-br from-blue-900/20 via-purple-900/20 to-pink-900/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h1 className="text-5xl font-bold mb-6 gradient-text">Our Services</h1>
+            <h1 className="text-5xl font-bold mb-6 gradient-text">{t("ourServices")}</h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Comprehensive coaching programs designed to help students excel in competitive exams and academic
-              pursuits.
+              {t("servicesText")}
             </p>
           </div>
         </div>
@@ -138,18 +136,18 @@ export default function ServicesPage() {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4 gradient-text">Competitive Exam Preparation</h2>
-            <p className="text-xl text-gray-300">Expert coaching for India's toughest entrance exams</p>
+            <h2 className="text-4xl font-bold mb-4 gradient-text">{t("competitiveExams")}</h2>
+            <p className="text-xl text-gray-300">{t("competitiveExamsText")}</p>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {mainServices.map((service, index) => (
               <Card key={index} className="glassmorphism hover-glow group">
-                <CardHeader>
+                <CardHeader className="max-h-[30vh]">
                   <div
-                    className={`w-16 h-16 mb-4 rounded-full bg-gradient-to-r ${service.color} flex items-center justify-center neon-glow group-hover:scale-110 transition-transform`}
+                    className={`w-16 h-20 mb-4 rounded-full bg-gradient-to-r ${service.color} flex items-center justify-center group-hover:scale-110 transition-transform`}
                   >
-                    <service.icon className="w-8 h-8 text-white" />
+                    <service.icon className="w-8   h-8 text-white" />
                   </div>
                   <CardTitle className="text-2xl gradient-text">{service.title}</CardTitle>
                   <CardDescription className="text-gray-400">{service.description}</CardDescription>
@@ -179,8 +177,8 @@ export default function ServicesPage() {
                     <div className="flex justify-between items-center mb-4">
                       <span className="text-2xl font-bold gradient-text">{service.price}</span>
                     </div>
-                    <Button className="w-full neon-glow hover-glow bg-gradient-to-r from-blue-500 to-purple-600">
-                      Enroll Now
+                    <Button className="w-full hover-glow bg-gradient-to-r from-blue-500 to-purple-600">
+                      {t("iitJeeText8")}
                     </Button>
                   </div>
                 </CardContent>
@@ -194,8 +192,8 @@ export default function ServicesPage() {
       <section className="py-20 bg-gray-900/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4 gradient-text">School Classes</h2>
-            <p className="text-xl text-gray-300">Strong foundation for academic excellence</p>
+            <h2 className="text-4xl font-bold mb-4 gradient-text">{t("schoolClasses")}</h2>
+            <p className="text-xl text-gray-300">{t("schoolClassesText1")}</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -223,7 +221,7 @@ export default function ServicesPage() {
                       <span className="text-xl font-bold gradient-text">{classService.price}</span>
                     </div>
                     <Button variant="outline" className="w-full neon-border hover-glow bg-transparent">
-                      Learn More
+                      {t("class9thText8")}
                     </Button>
                   </div>
                 </CardContent>
@@ -237,8 +235,8 @@ export default function ServicesPage() {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4 gradient-text">Additional Services</h2>
-            <p className="text-xl text-gray-300">Extra support to ensure your success</p>
+            <h2 className="text-4xl font-bold mb-4 gradient-text">{t("additionalServices")}</h2>
+            <p className="text-xl text-gray-300">{t("additionalServicesText1")}</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -246,7 +244,7 @@ export default function ServicesPage() {
               <Card key={index} className="glassmorphism hover-glow text-center">
                 <CardHeader>
                   <div
-                    className={`w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r ${service.color} flex items-center justify-center neon-glow`}
+                    className={`w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r ${service.color} flex items-center justify-center neon-border`}
                   >
                     <service.icon className="w-8 h-8 text-white" />
                   </div>
@@ -265,43 +263,43 @@ export default function ServicesPage() {
       <section className="py-20 bg-gray-900/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4 gradient-text">Why Choose Aakash Institute?</h2>
-            <p className="text-xl text-gray-300">What makes us different from others</p>
+            <h2 className="text-4xl font-bold mb-4 gradient-text">{t("whyChooseAakashInstitute")}</h2>
+            <p className="text-xl text-gray-300">{t("whyChooseAakashInstituteText1")}</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <Card className="glassmorphism hover-glow">
               <CardContent className="p-8 text-center">
-                <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 flex items-center justify-center neon-glow">
+                <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 flex items-center justify-center ">
                   <Award className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold gradient-text mb-4">Proven Track Record</h3>
+                <h3 className="text-xl font-semibold gradient-text mb-4">{t("provenTrackRecord")}</h3>
                 <p className="text-gray-300">
-                  25+ years of excellence with thousands of successful students in top colleges.
+                  {t("provenTrackRecordText1")}
                 </p>
               </CardContent>
             </Card>
 
             <Card className="glassmorphism hover-glow">
               <CardContent className="p-8 text-center">
-                <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-green-500 to-blue-600 flex items-center justify-center neon-glow">
+                <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-green-500 to-blue-600 flex items-center justify-center ">
                   <Users className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold gradient-text mb-4">Expert Faculty</h3>
+                <h3 className="text-xl font-semibold gradient-text mb-4">{t("expertFaculty1")}</h3>
                 <p className="text-gray-300">
-                  Highly qualified teachers with years of experience in competitive exam coaching.
+                 {t("expertFacultyText1")}
                 </p>
               </CardContent>
             </Card>
 
             <Card className="glassmorphism hover-glow">
               <CardContent className="p-8 text-center">
-                <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-purple-500 to-pink-600 flex items-center justify-center neon-glow">
+                <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-purple-500 to-pink-600 flex items-center justify-center ">
                   <Target className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold gradient-text mb-4">Personalized Attention</h3>
+                <h3 className="text-xl font-semibold gradient-text mb-4">{t("personalizedAttention1")}</h3>
                 <p className="text-gray-300">
-                  Small batch sizes ensure individual attention and customized learning approach.
+                 {t ("personalizedAttentionText1")}
                 </p>
               </CardContent>
             </Card>
@@ -314,17 +312,17 @@ export default function ServicesPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <Card className="glassmorphism">
             <CardContent className="p-12">
-              <h2 className="text-4xl font-bold mb-4 gradient-text">Ready to Start Your Journey?</h2>
+              <h2 className="text-4xl font-bold mb-4 gradient-text">{t("startJourney")}</h2>
               <p className="text-xl text-gray-300 mb-8">
-                Join thousands of successful students who achieved their dreams with Aakash Institute.
+               {t("startJourneyText1")}
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link href="/register">
                   <Button
                     size="lg"
-                    className="neon-glow hover-glow bg-gradient-to-r from-blue-500 to-purple-600 px-8 py-4 text-lg"
+                    className="hover-glow bg-gradient-to-r from-blue-500 to-purple-600 px-8 py-4 text-lg"
                   >
-                    Register Now
+                  {t("startJourneyText2")}
                   </Button>
                 </Link>
                 <Link href="/contact">
@@ -333,7 +331,7 @@ export default function ServicesPage() {
                     size="lg"
                     className="neon-border hover-glow px-8 py-4 text-lg bg-transparent"
                   >
-                    Contact Us
+                    {t("startJourneyText3")}
                   </Button>
                 </Link>
               </div>

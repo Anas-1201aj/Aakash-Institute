@@ -11,64 +11,64 @@ export default function AchievementsPage() {
 
   const toppers = [
     {
-      name: "Arjun Mehta",
-      exam: "IIT-JEE",
-      rank: "AIR 12",
+      name: t("arjunMehta"),
+      exam: t("arjunMehtaText1"),
+      // rank: "AIR 12",
       year: "2024",
-      college: "IIT Delhi",
-      branch: "Computer Science",
-      image: "/placeholder.svg?height=150&width=150",
-      quote: "Aakash Institute made my IIT dream come true with their excellent guidance.",
+      college: t("arjunMehtaText2"),
+      branch: t("arjunMehtaText3"),
+      image: "/boy1.jpg",
+      quote: t("arjunMehtaText4"),
     },
     {
-      name: "Sneha Sharma",
-      exam: "NEET",
-      rank: "AIR 45",
+      name: t("snehaSharma"),
+      exam: t("snehaSharmaText1"),
+      // rank: "AIR 45",
       year: "2024",
-      college: "AIIMS Delhi",
-      branch: "MBBS",
-      image: "/placeholder.svg?height=150&width=150",
-      quote: "The systematic approach and regular tests helped me crack NEET.",
+      college: t("snehaSharmaText2"),
+      branch: t("snehaSharmaText3"),
+      image: "/girl1.avif",
+      quote: t("snehaSharmaText4"),
     },
     {
-      name: "Rohit Kumar",
-      exam: "IIT-JEE",
-      rank: "AIR 78",
+      name: t("rohitKumar"),
+      exam: t("rohitKumarText1"),
+      // rank: "AIR 78",
       year: "2024",
-      college: "IIT Bombay",
-      branch: "Mechanical Engineering",
-      image: "/placeholder.svg?height=150&width=150",
-      quote: "Best faculty and study materials. Highly recommended!",
+      college:  t("rohitKumarText2"),
+      branch: t("rohitKumarText3"),
+      image: "/boy2.jpg",
+      quote:  t("rohitKumarText4"),
     },
     {
-      name: "Priya Patel",
-      exam: "NEET",
-      rank: "AIR 156",
+      name: t("priyaPatel1"),
+      exam: t("priyaPatel2"),
+      // rank: "AIR 156",
       year: "2024",
-      college: "JIPMER",
-      branch: "MBBS",
-      image: "/placeholder.svg?height=150&width=150",
-      quote: "The doubt clearing sessions were extremely helpful.",
+      college:  t("priyaPatel3"),
+      branch:  t("priyaPatel4"),
+      image: "/girl2.webp",
+      quote:  t("priyaPatel5"),
     },
     {
-      name: "Vikash Singh",
-      exam: "IIT-JEE",
-      rank: "AIR 234",
+      name: t("vikasSingh"),
+      exam: t("vikasSinghText1"),
+      // rank: "AIR 234",
       year: "2024",
-      college: "IIT Kanpur",
-      branch: "Electrical Engineering",
-      image: "/placeholder.svg?height=150&width=150",
-      quote: "Excellent coaching with personal attention to each student.",
+      college: t("vikasSinghText2"),
+      branch:  t("vikasSinghText3"),
+      image: "/boy3.jpg",
+      quote: t("vikasSinghText4"),
     },
     {
-      name: "Ananya Gupta",
-      exam: "NEET",
-      rank: "AIR 289",
+      name: t("ananyaGupta"),
+      exam: t("ananyaGuptaText1"),
+      // rank: "AIR 289",
       year: "2024",
-      college: "KGMU Lucknow",
-      branch: "MBBS",
-      image: "/placeholder.svg?height=150&width=150",
-      quote: "The mock tests prepared me well for the actual exam.",
+      college: t("ananyaGuptaText2"),
+      branch: t("ananyaGuptaText3"),
+      image: "/girl3.webp",
+      quote:t("ananyaGuptaText4"),
     },
   ]
 
@@ -133,25 +133,25 @@ export default function AchievementsPage() {
   const statistics = [
     {
       number: "15,000+",
-      label: "Students Trained",
+      label:t ("studentsTrained"),
       icon: Users,
       color: "from-blue-500 to-cyan-500",
     },
     {
       number: "95%",
-      label: "Success Rate",
+      label: t("successRate"),
       icon: TrendingUp,
       color: "from-green-500 to-emerald-500",
     },
     {
       number: "500+",
-      label: "IIT Selections",
+      label: t("iitSelections"),
       icon: Trophy,
       color: "from-yellow-500 to-orange-500",
     },
     {
       number: "25+",
-      label: "Years Experience",
+      label: t("yearsExperience"),
       icon: Target,
       color: "from-purple-500 to-pink-500",
     },
@@ -190,9 +190,9 @@ export default function AchievementsPage() {
       <section className="py-20 bg-gradient-to-br from-blue-900/20 via-purple-900/20 to-pink-900/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h1 className="text-5xl font-bold mb-6 gradient-text">Our Achievements</h1>
+            <h1 className="text-5xl font-bold mb-6 gradient-text">{t("ourAchievements")}</h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Celebrating 25+ years of excellence in education with outstanding results and student success stories.
+             {t("ourAchievementsText1")}
             </p>
           </div>
         </div>
@@ -206,7 +206,7 @@ export default function AchievementsPage() {
               <Card key={index} className="glassmorphism hover-glow text-center">
                 <CardContent className="p-8">
                   <div
-                    className={`w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r ${stat.color} flex items-center justify-center neon-glow`}
+                    className={`w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r ${stat.color} flex items-center justify-center `}
                   >
                     <stat.icon className="w-8 h-8 text-white" />
                   </div>
@@ -223,8 +223,8 @@ export default function AchievementsPage() {
       <section className="py-20 bg-gray-900/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4 gradient-text">Our Top Performers 2024</h2>
-            <p className="text-xl text-gray-300">Meet our star students who achieved remarkable success</p>
+            <h2 className="text-4xl font-bold mb-4 gradient-text">{t("ourTOp")}</h2>
+            <p className="text-xl text-gray-300">{t("ourTopPerformers")}</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -241,7 +241,7 @@ export default function AchievementsPage() {
                         className="w-24 h-24 rounded-full mx-auto object-cover group-hover:scale-105 transition-transform"
                       />
                       <div className="absolute -top-2 -right-2">
-                        <div className="w-8 h-8 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full flex items-center justify-center neon-glow">
+                        <div className="w-8 h-8 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full flex items-center justify-center ">
                           <Crown className="w-4 h-4 text-white" />
                         </div>
                       </div>
@@ -277,8 +277,8 @@ export default function AchievementsPage() {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4 gradient-text">Year-wise Results</h2>
-            <p className="text-xl text-gray-300">Consistent excellence over the years</p>
+            <h2 className="text-4xl font-bold mb-4 gradient-text">{t("yearWiseResults")}</h2>
+            <p className="text-xl text-gray-300">{t("yearWiseResultsText")}</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -290,18 +290,18 @@ export default function AchievementsPage() {
                 <CardContent className="space-y-4">
                   <div className="text-center">
                     <div className="text-3xl font-bold text-blue-400">{result.iitSelections}</div>
-                    <div className="text-sm text-gray-400">IIT Selections</div>
+                    <div className="text-sm text-gray-400">{t("iitSelection1")}</div>
                   </div>
                   <div className="text-center">
                     <div className="text-3xl font-bold text-green-400">{result.neetSelections}</div>
-                    <div className="text-sm text-gray-400">NEET Selections</div>
+                    <div className="text-sm text-gray-400">{t("neetSelection2")}</div>
                   </div>
                   <div className="text-center">
                     <div className="text-2xl font-bold text-purple-400">{result.successRate}</div>
-                    <div className="text-sm text-gray-400">Success Rate</div>
+                    <div className="text-sm text-gray-400"> {t("successRate1")}</div>
                   </div>
                   <div className="text-center pt-2 border-t border-gray-700">
-                    <div className="text-lg text-gray-300">{result.totalStudents} Students</div>
+                    <div className="text-lg text-gray-300">{result.totalStudents} {t("students")}</div>
                   </div>
                 </CardContent>
               </Card>
@@ -323,7 +323,7 @@ export default function AchievementsPage() {
               <Card key={index} className="glassmorphism hover-glow text-center">
                 <CardContent className="p-6">
                   <div
-                    className={`w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r ${award.color} flex items-center justify-center neon-glow`}
+                    className={`w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r ${award.color} flex items-center justify-center `}
                   >
                     <award.icon className="w-8 h-8 text-white" />
                   </div>
@@ -349,7 +349,7 @@ export default function AchievementsPage() {
               <Card key={index} className="glassmorphism hover-glow">
                 <CardContent className="p-6">
                   <div className="flex items-start space-x-4">
-                    <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center neon-glow flex-shrink-0">
+                    <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center  flex-shrink-0">
                       <Award className="w-6 h-6 text-white" />
                     </div>
                     <div className="flex-1">

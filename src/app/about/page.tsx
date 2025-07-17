@@ -11,62 +11,62 @@ export default function AboutPage() {
 
   const faculty = [
     {
-      name: "Dr. Rajesh Kumar",
-      subject: "Physics",
-      experience: "15 Years",
-      qualification: "Ph.D. IIT Delhi",
-      image: "/placeholder.svg?height=200&width=200",
-      specialization: "Mechanics & Thermodynamics",
+      name:  t("rajeshKumar"),
+      subject:t("rajeshKumarText1"),
+      experience: t("rajeshKumarText2"),
+      qualification: t("rajeshKumarText3"),
+      image: "/teacher2-img.avif?height=200&width=200",
+      specialization: t("rajeshKumarText4"),
     },
     {
-      name: "Prof. Sunita Sharma",
-      subject: "Chemistry",
-      experience: "12 Years",
-      qualification: "M.Sc. Chemistry",
-      image: "/placeholder.svg?height=200&width=200",
-      specialization: "Organic & Inorganic Chemistry",
+      name:t("sunitaSharma"),
+      subject:  t("sunitaSharmaText1"),
+      experience:   t("sunitaSharmaText2"),
+      qualification: t("sunitaSharmaText3"),
+      image: "/teacher1-img.webp?height=200&width=200",
+      specialization:  t("sunitaSharmaText2"),
     },
     {
-      name: "Mr. Anas Javed",
-      subject: "Mathematics",
-      experience: "18 Years",
-      qualification: "M.Tech. IIT Bombay",
-      image: "/placeholder.svg?height=200&width=200",
-      specialization: "Calculus & Algebra",
+      name: t("anasJaved"),
+      subject: t( "anasJavedText1"),
+      experience: t( "anasJavedText2"),
+      qualification:t( "anasJavedText3"),
+      image: "/teacher3-img.avif?height=200&width=200",
+      specialization: t( "anasJavedText4"),
     },
     {
-      name: "Dr. Priya Patel",
-      subject: "Biology",
-      experience: "10 Years",
-      qualification: "Ph.D. Botany",
-      image: "/placeholder.svg?height=200&width=200",
-      specialization: "Genetics & Ecology",
+      name: t("priyaPatel"),
+      subject:  t("priyaPatelText1"),
+      experience:t("priyaPatelText2"),
+      qualification:t("priyaPatelText3"),
+      image: "/teacher4-img.avif?height=200&width=200",
+      specialization: t("priyaPatelText4"),
     },
   ]
 
   const values = [
     {
       icon: Target,
-      title: "Excellence",
-      description: "We strive for excellence in everything we do, from teaching to student support.",
-      color: "from-blue-500 to-cyan-500",
+      title: t("excellence"),
+      description: t("excellenceText"),
+      color: "from-orange-500 to-red-500",
     },
     {
       icon: Heart,
-      title: "Care",
-      description: "We care deeply about each student's success and provide personalized attention.",
-      color: "from-pink-500 to-red-500",
+      title: t("care"),
+      description: t("careText"),
+      color: "from-red-500 to-rose-500",
     },
     {
       icon: Lightbulb,
-      title: "Innovation",
-      description: "We continuously innovate our teaching methods to make learning more effective.",
-      color: "from-yellow-500 to-orange-500",
+      title:t( "innovation"),
+      description: t("innovationText"),
+      color: "from-blue-500 to-cyan-500",
     },
     {
       icon: Users,
-      title: "Community",
-      description: "We build a supportive community where students can learn and grow together.",
+      title: t("community"),
+      description: t("communityText"),
       color: "from-green-500 to-emerald-500",
     },
   ]
@@ -77,9 +77,9 @@ export default function AboutPage() {
       <section className="py-20 bg-gradient-to-br from-blue-900/20 via-purple-900/20 to-pink-900/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h1 className="text-5xl font-bold mb-6 gradient-text">About Aakash Institute</h1>
+            <h1 className="text-5xl font-bold mb-6 gradient-text">{t("aboutAakash")}</h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Empowering students to achieve their dreams through quality education and unwavering support since 1999.
+             {t("aboutText")}
             </p>
           </div>
         </div>
@@ -90,33 +90,25 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-4xl font-bold mb-6 gradient-text">Our Story</h2>
+              <h2 className="text-4xl font-bold mb-6 gradient-text">{t("ourStory")}</h2>
               <div className="space-y-4 text-gray-300">
+               <p>{t("storyText1")}</p>
                 <p>
-                  Founded in 1999 with a vision to provide world-class education, Aakash Institute has been at the
-                  forefront of competitive exam preparation in India. What started as a small coaching center has now
-                  grown into one of the most trusted names in education.
+                  {t("storyText2")}
                 </p>
                 <p>
-                  Our journey began with a simple belief: every student deserves the best guidance to achieve their
-                  dreams. Over the years, we have helped thousands of students crack prestigious examinations like
-                  IIT-JEE, NEET, and various other competitive exams.
-                </p>
-                <p>
-                  Today, we stand proud with a legacy of excellence, innovation, and student success. Our commitment to
-                  quality education and personalized attention has made us the preferred choice for students and parents
-                  across the country.
+                {t("storyText3")}
                 </p>
               </div>
             </div>
             <div className="relative">
               <div className="glassmorphism p-8 rounded-2xl">
                 <Image
-                  src="/placeholder.svg?height=400&width=500"
+                  src="/ourstory-img.avif"
                   alt="Aakash Institute Building"
                   width={500}
                   height={400}
-                  className="rounded-lg"
+                  className="rounded-lg hover:transition-transform hover:scale-105"
                 />
               </div>
             </div>
@@ -130,30 +122,28 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <Card className="glassmorphism hover-glow">
               <CardHeader>
-                <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center neon-glow mb-4">
+                <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center mb-4">
                   <Target className="w-8 h-8 text-white" />
                 </div>
-                <CardTitle className="text-2xl gradient-text">Our Mission</CardTitle>
+                <CardTitle className="text-2xl gradient-text">{t("Mission")}</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-gray-300">
-                  To provide world-class education and comprehensive guidance that empowers students to excel in
-                  competitive examinations and achieve their career aspirations with confidence and competence..
+                  {t("Text")}
                 </p>
               </CardContent>
             </Card>
 
             <Card className="glassmorphism hover-glow">
               <CardHeader>
-                <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center neon-glow mb-4">
+                <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center  mb-4">
                   <Award className="w-8 h-8 text-white" />
                 </div>
-                <CardTitle className="text-2xl gradient-text">Our Vision</CardTitle>
+                <CardTitle className="text-2xl gradient-text">{t("Vision")}</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-gray-300">
-                  To be the leading educational institution that transforms lives through innovative teaching
-                  methodologies, creating future leaders and professionals who contribute meaningfully to society.
+                  {t("Text1")}
                 </p>
               </CardContent>
             </Card>
@@ -165,8 +155,8 @@ export default function AboutPage() {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4 gradient-text">Our Expert Faculty</h2>
-            <p className="text-xl text-gray-300">Meet our experienced and dedicated teachers</p>
+            <h2 className="text-4xl font-bold mb-4 gradient-text"> {t("expertFaculty")}</h2>
+            <p className="text-xl text-gray-300">{t("facultyText")}</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -199,8 +189,8 @@ export default function AboutPage() {
       <section className="py-20 bg-gray-900/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4 gradient-text">Our Core Values</h2>
-            <p className="text-xl text-gray-300">The principles that guide everything we do</p>
+            <h2 className="text-4xl font-bold mb-4 gradient-text"> {t("coreValue")}</h2>
+            <p className="text-xl text-gray-300">{t("coreValueText")}</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -208,7 +198,7 @@ export default function AboutPage() {
               <Card key={index} className="glassmorphism hover-glow text-center">
                 <CardHeader>
                   <div
-                    className={`w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r ${value.color} flex items-center justify-center neon-glow`}
+                    className={`w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r ${value.color} flex items-center justify-center `}
                   >
                     <value.icon className="w-8 h-8 text-white" />
                   </div>
@@ -227,20 +217,19 @@ export default function AboutPage() {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4 gradient-text">Our Teaching Methodology</h2>
-            <p className="text-xl text-gray-300">Proven methods that deliver results</p>
+            <h2 className="text-4xl font-bold mb-4 gradient-text">{t("teachingMethods")}</h2>
+            <p className="text-xl text-gray-300">{t("teachingMethodsText")}</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <Card className="glassmorphism hover-glow">
               <CardHeader>
                 <BookOpen className="w-12 h-12 text-blue-400 mb-4" />
-                <CardTitle className="gradient-text">Conceptual Learning</CardTitle>
+                <CardTitle className="gradient-text">{t("conceptualLearning")}</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-gray-300">
-                  We focus on building strong conceptual foundations rather than rote learning, ensuring students
-                  understand the 'why' behind every concept.
+                  {t("conceptualLearningText")}
                 </p>
               </CardContent>
             </Card>
@@ -248,12 +237,11 @@ export default function AboutPage() {
             <Card className="glassmorphism hover-glow">
               <CardHeader>
                 <Target className="w-12 h-12 text-purple-400 mb-4" />
-                <CardTitle className="gradient-text">Regular Assessment</CardTitle>
+                <CardTitle className="gradient-text">{t("regularAssesments")}</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-gray-300">
-                  Continuous evaluation through tests and assignments helps track progress and identify areas that need
-                  improvement.
+                  {t("regularAssesmentsText")}
                 </p>
               </CardContent>
             </Card>
@@ -261,7 +249,7 @@ export default function AboutPage() {
             <Card className="glassmorphism hover-glow">
               <CardHeader>
                 <Users className="w-12 h-12 text-pink-400 mb-4" />
-                <CardTitle className="gradient-text">Personal Attention</CardTitle>
+                <CardTitle className="gradient-text">{t("personalizedAttention")}</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-gray-300">
