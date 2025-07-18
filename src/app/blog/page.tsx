@@ -1,3 +1,5 @@
+import type { TranslationKey } from "../../../components/language-provider"
+
 "use client"
 
 import { useLanguage } from "../../../components/language-provider"
@@ -11,87 +13,110 @@ import Image from "next/image"
 export default function BlogPage() {
   const { t } = useLanguage()
 
-  const featuredPost = {
-    title: "Top 10 Study Strategies for IIT-JEE Success",
-    excerpt: "Discover proven techniques that helped our students achieve top ranks in IIT-JEE examinations.",
-    author: "Dr. Rajesh Kumar",
-    date: "March 15, 2024",
-    readTime: "8 min read",
+  const featuredPost: {
+    titleKey: TranslationKey
+    excerptKey: TranslationKey
+    authorKey: TranslationKey
+    dateKey: TranslationKey
+    readTimeKey: TranslationKey
+    image: string
+    categoryKey: TranslationKey
+    tagsKeys: TranslationKey[]
+  } = {
+    titleKey: "blogFeaturedTitle",
+    excerptKey: "blogFeaturedExcerpt",
+    authorKey: "blogFeaturedAuthor",
+    dateKey: "blogFeaturedDate",
+    readTimeKey: "blogFeaturedReadTime",
     image: "/jee-article.jpg?height=200&width=300",
-    category: "Strategy",
-    tags: ["IIT-JEE", "Study Tips", "Strategy"],
+    categoryKey: "blogCategoryStrategy",
+    tagsKeys: ["blogTagIITJEE", "blogTagStudyTips", "blogTagStrategy"],
   }
 
-  const blogPosts = [
+  const blogPosts: {
+    titleKey: TranslationKey
+    excerptKey: TranslationKey
+    authorKey: TranslationKey
+    dateKey: TranslationKey
+    readTimeKey: TranslationKey
+    image: string
+    categoryKey: TranslationKey
+    tagsKeys: TranslationKey[]
+  }[] = [
     {
-      title: "How to Master Physics Problem Solving",
-      excerpt: "Step-by-step approach to tackle complex physics problems with confidence.",
-      author: "Prof. Sunita Sharma",
-      date: "March 12, 2024",
-      readTime: "6 min read",
+      titleKey: "blogPost1Title",
+      excerptKey: "blogPost1Excerpt",
+      authorKey: "blogPost1Author",
+      dateKey: "blogPost1Date",
+      readTimeKey: "blogPost1ReadTime",
       image: "/physics.jpg?height=200&width=300",
-      category: "Physics",
-      tags: ["Physics", "Problem Solving"],
+      categoryKey: "blogCategoryPhysics",
+      tagsKeys: ["blogTagPhysics", "blogTagProblemSolving"],
     },
     {
-      title: "NEET Biology: Key Topics to Focus On",
-      excerpt: "Essential biology topics that frequently appear in NEET examinations.",
-      author: "Dr. Priya Patel",
-      date: "March 10, 2024",
-      readTime: "5 min read",
+      titleKey: "blogPost2Title",
+      excerptKey: "blogPost2Excerpt",
+      authorKey: "blogPost2Author",
+      dateKey: "blogPost2Date",
+      readTimeKey: "blogPost2ReadTime",
       image: "/biology.png?height=200&width=300",
-      category: "Biology",
-      tags: ["NEET", "Biology"],
+      categoryKey: "blogCategoryBiology",
+      tagsKeys: ["blogTagNEET", "blogTagBiology"],
     },
     {
-      title: "Time Management During Competitive Exams",
-      excerpt: "Effective strategies to manage time and maximize your exam performance.",
-      author: "Mr. Amit Verma",
-      date: "March 8, 2024",
-      readTime: "4 min read",
+      titleKey: "blogPost3Title",
+      excerptKey: "blogPost3Excerpt",
+      authorKey: "blogPost3Author",
+      dateKey: "blogPost3Date",
+      readTimeKey: "blogPost3ReadTime",
       image: "/timemanage.jpeg?height=200&width=300",
-      category: "Tips",
-      tags: ["Time Management", "Exam Tips"],
+      categoryKey: "blogCategoryTips",
+      tagsKeys: ["blogTagTimeManagement", "blogTagExamTips"],
     },
     {
-      title: "Chemistry Formulas: Memory Techniques",
-      excerpt: "Proven methods to memorize and recall chemistry formulas effectively.",
-      author: "Dr. Rajesh Kumar",
-      date: "March 5, 2024",
-      readTime: "7 min read",
+      titleKey: "blogPost4Title",
+      excerptKey: "blogPost4Excerpt",
+      authorKey: "blogPost4Author",
+      dateKey: "blogPost4Date",
+      readTimeKey: "blogPost4ReadTime",
       image: "/chemistry.jpg?height=200&width=300",
-      category: "Chemistry",
-      tags: ["Chemistry", "Memory"],
+      categoryKey: "blogCategoryChemistry",
+      tagsKeys: ["blogTagChemistry", "blogTagMemory"],
     },
     {
-      title: "Motivation: Staying Focused During Preparation",
-      excerpt: "Psychological strategies to maintain motivation throughout your preparation journey.",
-      author: "Prof. Sunita Sharma",
-      date: "March 3, 2024",
-      readTime: "5 min read",
+      titleKey: "blogPost5Title",
+      excerptKey: "blogPost5Excerpt",
+      authorKey: "blogPost5Author",
+      dateKey: "blogPost5Date",
+      readTimeKey: "blogPost5ReadTime",
       image: "/tips.jpg?height=200&width=300",
-      category: "Motivation",
-      tags: ["Motivation", "Mental Health"],
+      categoryKey: "blogCategoryMotivation",
+      tagsKeys: ["blogTagMotivation", "blogTagMentalHealth"],
     },
     {
-      title: "Mathematics: Calculus Made Simple",
-      excerpt: "Breaking down complex calculus concepts into easy-to-understand steps.",
-      author: "Mr. Amit Verma",
-      date: "March 1, 2024",
-      readTime: "9 min read",
+      titleKey: "blogPost6Title",
+      excerptKey: "blogPost6Excerpt",
+      authorKey: "blogPost6Author",
+      dateKey: "blogPost6Date",
+      readTimeKey: "blogPost6ReadTime",
       image: "/calculus.png?height=200&width=300",
-      category: "Mathematics",
-      tags: ["Mathematics", "Calculus"],
+      categoryKey: "blogCategoryMathematics",
+      tagsKeys: ["blogTagMathematics", "blogTagCalculus"],
     },
   ]
 
-  const categories = [
-    { name: "Strategy", count: 12, icon: Target, color: "from-blue-500 to-cyan-500" },
-    { name: "Physics", count: 8, icon: Lightbulb, color: "from-yellow-500 to-orange-500" },
-    { name: "Chemistry", count: 6, icon: BookOpen, color: "from-green-500 to-emerald-500" },
-    { name: "Mathematics", count: 10, icon: TrendingUp, color: "from-purple-500 to-pink-500" },
-    { name: "Biology", count: 7, icon: Target, color: "from-red-500 to-pink-500" },
-    { name: "Motivation", count: 5, icon: Lightbulb, color: "from-indigo-500 to-purple-500" },
+  const categories: {
+    nameKey: TranslationKey
+    count: number
+    icon: React.ComponentType<React.SVGProps<SVGSVGElement>>
+    color: string
+  }[] = [
+    { nameKey: "blogCategoryStrategy", count: 12, icon: Target, color: "from-blue-500 to-cyan-500" },
+    { nameKey: "blogCategoryPhysics", count: 8, icon: Lightbulb, color: "from-yellow-500 to-orange-500" },
+    { nameKey: "blogCategoryChemistry", count: 6, icon: BookOpen, color: "from-green-500 to-emerald-500" },
+    { nameKey: "blogCategoryMathematics", count: 10, icon: TrendingUp, color: "from-purple-500 to-pink-500" },
+    { nameKey: "blogCategoryBiology", count: 7, icon: Target, color: "from-red-500 to-pink-500" },
+    { nameKey: "blogCategoryMotivation", count: 5, icon: Lightbulb, color: "from-indigo-500 to-purple-500" },
   ]
 
   return (
@@ -100,9 +125,9 @@ export default function BlogPage() {
       <section className="py-20 bg-gradient-to-br from-blue-900/20 via-purple-900/20 to-pink-900/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h1 className="text-5xl font-bold mb-6 gradient-text">Educational Blog</h1>
+            <h1 className="text-5xl font-bold mb-6 gradient-text">{t("blog")}</h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Expert insights, study tips, and strategies to help you excel in your academic journey.
+              {t("blogHeroSubtitle")}
             </p>
           </div>
 
@@ -112,7 +137,7 @@ export default function BlogPage() {
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
               <Input
                 className="pl-10 neon-border bg-gray-800/50 text-white"
-                placeholder="Search articles, topics, or authors..."
+                placeholder={t("blogSearchPlaceholder")}
               />
             </div>
           </div>
@@ -131,8 +156,8 @@ export default function BlogPage() {
                   >
                     <category.icon className="w-6 h-6 text-white" />
                   </div>
-                  <h3 className="font-semibold text-white text-sm">{category.name}</h3>
-                  <p className="text-xs text-gray-400">{category.count} articles</p>
+                  <h3 className="font-semibold text-white text-sm">{t(category.nameKey)}</h3>
+                  <p className="text-xs text-gray-400">{category.count} {t("blogArticles")}</p>
                 </CardContent>
               </Card>
             ))}
@@ -144,7 +169,7 @@ export default function BlogPage() {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-4 gradient-text">Featured Article</h2>
+            <h2 className="text-4xl font-bold mb-4 gradient-text">{t("blogFeaturedArticle")}</h2>
           </div>
 
           <Card className="glassmorphism hover-glow overflow-hidden">
@@ -152,40 +177,40 @@ export default function BlogPage() {
               <div className="relative h-64 lg:h-auto">
                 <Image
                   src={featuredPost.image || "/placeholder.svg"}
-                  alt={featuredPost.title}
+                  alt={t(featuredPost.titleKey)}
                   fill
                   className="object-cover"
                 />
               </div>
               <div className="p-8">
                 <div className="flex items-center space-x-2 mb-4">
-                  <Badge className="bg-gradient-to-r from-blue-500 to-purple-600">{featuredPost.category}</Badge>
-                  {featuredPost.tags.map((tag, index) => (
+                  <Badge className="bg-gradient-to-r from-blue-500 to-purple-600">{t(featuredPost.categoryKey)}</Badge>
+                  {featuredPost.tagsKeys.map((tagKey, index) => (
                     <Badge key={index} variant="outline" className="text-xs">
-                      {tag}
+                      {t(tagKey)}
                     </Badge>
                   ))}
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-4">{featuredPost.title}</h3>
-                <p className="text-gray-300 mb-6">{featuredPost.excerpt}</p>
+                <h3 className="text-2xl font-bold text-white mb-4">{t(featuredPost.titleKey)}</h3>
+                <p className="text-gray-300 mb-6">{t(featuredPost.excerptKey)}</p>
                 <div className="flex items-center justify-between mb-6">
                   <div className="flex items-center space-x-4 text-sm text-gray-400">
                     <div className="flex items-center space-x-1">
                       <User className="w-4 h-4" />
-                      <span>{featuredPost.author}</span>
+                      <span>{t(featuredPost.authorKey)}</span>
                     </div>
                     <div className="flex items-center space-x-1">
                       <Calendar className="w-4 h-4" />
-                      <span>{featuredPost.date}</span>
+                      <span>{t(featuredPost.dateKey)}</span>
                     </div>
                     <div className="flex items-center space-x-1">
                       <Clock className="w-4 h-4" />
-                      <span>{featuredPost.readTime}</span>
+                      <span>{t(featuredPost.readTimeKey)}</span>
                     </div>
                   </div>
                 </div>
                 <Button className=" hover-glow bg-gradient-to-r from-blue-500 to-purple-600">
-                  Read Full Article
+                  {t("blogReadFullArticle")}
                 </Button>
               </div>
             </div>
@@ -197,41 +222,41 @@ export default function BlogPage() {
       <section className="py-20 bg-gray-900/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-4 gradient-text">Latest Articles</h2>
-            <p className="text-xl text-gray-300">Stay updated with our latest educational content</p>
+            <h2 className="text-4xl font-bold mb-4 gradient-text">{t("blogLatestArticles")}</h2>
+            <p className="text-xl text-gray-300">{t("blogLatestArticlesSubtitle")}</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {blogPosts.map((post, index) => (
               <Card key={index} className="glassmorphism hover-glow overflow-hidden">
                 <div className="relative h-48">
-                  <Image src={post.image || "/placeholder.svg"} alt={post.title} fill className="object-cover" />
+                  <Image src={post.image || "/placeholder.svg"} alt={t(post.titleKey)} fill className="object-cover" />
                   <div className="absolute top-4 left-4">
-                    <Badge className="bg-gradient-to-r from-blue-500 to-purple-600">{post.category}</Badge>
+                    <Badge className="bg-gradient-to-r from-blue-500 to-purple-600">{t(post.categoryKey)}</Badge>
                   </div>
                 </div>
                 <CardContent className="p-6">
-                  <h3 className="text-lg font-semibold text-white mb-2 line-clamp-2">{post.title}</h3>
-                  <p className="text-gray-300 text-sm mb-4 line-clamp-3">{post.excerpt}</p>
+                  <h3 className="text-lg font-semibold text-white mb-2 line-clamp-2">{t(post.titleKey)}</h3>
+                  <p className="text-gray-300 text-sm mb-4 line-clamp-3">{t(post.excerptKey)}</p>
                   <div className="flex items-center justify-between text-xs text-gray-400 mb-4">
                     <div className="flex items-center space-x-1">
                       <User className="w-3 h-3" />
-                      <span>{post.author}</span>
+                      <span>{t(post.authorKey)}</span>
                     </div>
                     <div className="flex items-center space-x-1">
                       <Clock className="w-3 h-3" />
-                      <span>{post.readTime}</span>
+                      <span>{t(post.readTimeKey)}</span>
                     </div>
                   </div>
                   <div className="flex flex-wrap gap-1 mb-4">
-                    {post.tags.map((tag, tagIndex) => (
+                    {post.tagsKeys.map((tagKey, tagIndex) => (
                       <Badge key={tagIndex} variant="outline" className="text-xs">
-                        {tag}
+                        {t(tagKey)}
                       </Badge>
                     ))}
                   </div>
                   <Button variant="outline" className="w-full neon-border hover-glow bg-transparent">
-                    Read More
+                    {t("blogReadMore")}
                   </Button>
                 </CardContent>
               </Card>
@@ -245,13 +270,13 @@ export default function BlogPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <Card className="glassmorphism text-center">
             <CardContent className="p-12">
-              <h2 className="text-4xl font-bold mb-4 gradient-text">Stay Updated</h2>
+              <h2 className="text-4xl font-bold mb-4 gradient-text">{t("blogStayUpdated")}</h2>
               <p className="text-xl text-gray-300 mb-8">
-                Subscribe to our newsletter for the latest study tips and educational insights.
+                {t("blogSubscribeText")}
               </p>
               <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-                <Input type="email" placeholder="Enter your email" className="neon-border bg-gray-800/50 text-white" />
-                <Button className=" hover-glow bg-gradient-to-r from-blue-500 to-purple-600">Subscribe</Button>
+                <Input type="email" placeholder={t("blogEmailPlaceholder")} className="neon-border bg-gray-800/50 text-white" />
+                <Button className=" hover-glow bg-gradient-to-r from-blue-500 to-purple-600">{t("blogSubscribeButton")}</Button>
               </div>
             </CardContent>
           </Card>
